@@ -1,0 +1,172 @@
+. {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #F5EDD3;
+}
+.content{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+	display: inherit;
+	background: white;
+	width: 746px;
+	border: solid 1px black;
+	margin: 20px 0;
+	border-radius: 20px;
+	overflow: hidden; 
+	box-shadow: 0 1px 1px rgba(0,0,0,0.15), 
+              0 2px 2px rgba(0,0,0,0.15), 
+              0 4px 4px rgba(0,0,0,0.15), 
+              0 8px 8px rgba(0,0,0,0.15);
+}
+/* input box color */
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0 30px #fff inset ; -webkit-text-fill-color: #000; }
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active { transition: background-color 5000s ease-in-out 0s; }
+
+#searchMeal {
+	border: none;
+	margin-left: 8px;
+	width: 720px;
+	border-radius: 20px;
+}
+#searchMeal:focus{
+	outline: none;
+	border: none;
+}
+
+
+#submitBtn{
+	width: 21px;
+	height: 21px;
+	background-image: url('https://png.pngtree.com/element_our/20190601/ourmid/pngtree-search-icon-image_1344447.jpg');
+	background-repeat : no-repeat;
+    background-size : cover;
+	border:none;
+}
+
+section {
+	display:grid;
+	grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+	margin: 20px 0;
+}
+
+.row {
+	border: solid 4px wheat;
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+	justify-content: center;
+	width: 180px;
+	height: 180px;
+	position: relative;
+	transition: background-color 0.3s ease;
+}
+
+.row:hover img{
+ 	filter: brightness(50%);
+}
+
+.mealName {
+	color: white;
+	opacity: 0;
+	position: absolute;
+	width: 180px;
+    overflow-wrap: break-word;
+    text-align: center;
+	transition: opacity 0.3s ease;
+	font-weight: 700;
+}
+.row:hover .mealName { /* row에 호버시 mealName의 opacity 변경 */
+    opacity: 1;
+}
+
+.row > img {
+	width: 100%;
+	height: 100%;
+}
+
+#modalOpenButton, #modalCloseButton {
+  cursor: pointer;
+}
+
+#modalContainer {
+  position: fixed;
+  margin: 300px 300px;
+  margin-top: 106px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #2d2013;
+}
+
+#modalContent {
+  position: absolute;
+  background-color: #ffffff;
+  width: 300px;
+  height: 150px;
+  padding: 15px;
+  z-index: 1;
+}
+
+#modalCloseButton{
+	z-index: 1;
+	margin: 20px;
+}
+
+
+#modalContainer img {
+	width: 150px;
+	height: 150px;
+	margin-bottom: 20px;
+}
+
+
+.ingredients {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	width: 900px;
+}
+
+.title{
+	font-weight: 700;
+	color:white;
+	font-size: 20px;
+    margin: 10px;
+}
+
+.list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+	justify-items: center;
+}
+
+.instruction {
+	text-align: center;
+	color: white;
+	padding: 5px;
+}
+
+.detailIngredient {
+	padding: 5px;
+    border-radius: 5px;
+    background: white;
+    text-align: center;
+}
+
+.mealTitle {
+	font-weight: 700;
+	color: white;
+	font-size: 30px;
+	padding: 20px;
+}
